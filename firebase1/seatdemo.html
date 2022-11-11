@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;400&family=Montserrat:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./seatdemo.css" />
+    <title>AbInBev Seat Reservation</title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="data:image/png;base64,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"
+            height="65"
+            alt="Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.ab-inbev.com/careers/">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.ab-inbev.com/our-brands/">AbInBev Products</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="text-reset me-3" href="#">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+
+        <button type="submit" class="btn btn-secondary"><span class="fa fa-search"></span> Search</button>
+  
+        <!-- Notifications -->
+        <div class="dropdown">
+          <a
+            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuAvatar"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              class="rounded-circle"
+              height="25"
+              alt="Black and White Portrait of a Man"
+              loading="lazy"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuAvatar"
+          >
+            <li>
+              <a class="dropdown-item" href="#">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Background image -->
+<div
+class="svg-wrapper bg-image shadow-1-strong rounded-lg"
+style="
+  background-image: url('https://images.unsplash.com/photo-1558882224-dda166733046?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80');
+  height: 87vh;
+  opacity: 0.9;
+"
+></div>
+<!-- Background image -->
+
+<div class="movie-container">
+    <h1>Pick A Seat For Yourself:</h1>
+    <select id="movie">
+      <option value="1"> Monday </option>
+      <option value="1"> Tuesday </option>
+      <option value="1"> Wednesday </option>
+      <option value="1"> Thursday </option>
+      <option value="1"> Friday </option>
+    </select>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <h1>N/A</h1>
+    </li>
+
+    <li>
+      <div class="seat selected"></div>
+      <h1>Selected</h1>
+    </li>
+
+    <li>
+      <div class="seat occupied"></div>
+      <h1>Occupied</h1>
+    </li>
+  </ul>
+
+ 
+
+  <div class="container">
+    <div class="screen"></div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

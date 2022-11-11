@@ -1,0 +1,117 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
+/*
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    background-color: rgba(187, 244, 246, 0.5);
+}
+*/
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, #ee7724, #d8363a, #f74d8e, #b44593);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #ee7724, #e44548, #dd3675, #b44593);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+
+.container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputBox input[type="text"], .inputBox input[type="email"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.inputBox textarea{
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.inputBox button{
+    width: 100%;    
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: rgb(0, 119, 255);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.inputBox button:hover{
+    background: rgb(0, 17, 255);
+    transition: all 0.3s ease;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.alert{
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+    height: 100%;
+    }
+    }
